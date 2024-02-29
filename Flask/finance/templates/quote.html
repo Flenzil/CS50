@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+            <br>
+            <button type = "submit">Get Quote</button>
+        </div>
+    </form>
+
+    <div class="header">
+        <h1>Quotes</h1>
+    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{name}}</td>
+                    <td>{{price}}</td>
+                </tr>
+            </tbody>
+        </table>
+{% endblock %}

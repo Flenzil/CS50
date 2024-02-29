@@ -1,0 +1,33 @@
+
+{% extends "layout.html"%}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <div class="header">
+        <h1>Transaction History</h1>
+    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Shares</th>
+                    <th>Transaction Type</th>
+                    <th>Value of Transaction</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in info%}
+                <tr>
+                    <td>{{i['stock']}}</td>
+                    <td>{{i['amount']}}</td>
+                    <td>{{i['type']}}</td>
+                    <td>{{i['value']}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+{% endblock %}
+

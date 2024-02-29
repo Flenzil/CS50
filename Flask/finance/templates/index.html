@@ -1,0 +1,46 @@
+{% extends "layout.html"%}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <div class="header">
+        <h1>Overview</h1>
+    </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stocks</th>
+                    <th>Shares</th>
+                    <th>Price</th>
+                    <th>TOTAL</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for i in info%}
+                <tr>
+                    <td>{{i['stock']}}</td>
+                    <td>{{i['amount']}}</td>
+                    <td>{{i['price']}}</td>
+                    <td>{{i['value']}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th>Cash</th>
+                    <th>{{cash}}</th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                    <th id = 'total'>TOTAL</th>
+                    <th>{{total}}</th>
+                </tr>
+            </tfoot>
+        </table>
+{% endblock %}
+

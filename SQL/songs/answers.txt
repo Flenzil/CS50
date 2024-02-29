@@ -1,0 +1,2 @@
+- The listners averages are: energy of 0.66, and average valence of 0.48 and danceability of 0.72
+- This only takes into account the top 100 songs and so is not representative of the users entire library. Also songs added later in the year might not have as much chance to enter the top 100 spots despite being influential on the listener.

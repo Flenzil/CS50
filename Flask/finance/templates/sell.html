@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <table>
+        <thead>
+            <tr>
+                <th>Stock to Sell</th>
+                <th>Amount</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <form action="/sell" method="post">
+                <div class="mb-3">
+                    <tr>
+                        <td>
+                            <select name = 'symbol'>
+                                <option value = '' selected disabled hidden>Stock</option>
+                                {% for option in options%}
+                                    <option value = {{option}}>{{option}}</option>
+                                {%endfor%}
+                            </select>
+                        </td>
+                        <td><input autocomplete="off" class="form-control mx-auto w-auto" id="amount" name="shares" placeholder="Amount"></td>
+                        <td><button type = 'submit'>Sell Stocks</button></td>
+                    </tr>
+                </div>
+            </form>
+        </tbody>
+    </table>
+{% endblock %}

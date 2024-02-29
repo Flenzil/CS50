@@ -1,0 +1,14 @@
+sort1 uses: bubble
+
+How do you know?: scales worst with size but improves dramatically when sorted
+
+sort2 uses: merge
+
+How do you know?: scales best well with size and doesn't care at all about whether data is sorted or not
+
+sort3 uses: selection
+
+How do you know?: scales middle with size and doesn't care at all about whether data is sorted or not
+
+
+
